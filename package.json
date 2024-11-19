@@ -1,0 +1,11 @@
+{
+  "name": "the-compact",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:yorhodes/the-compact.git",
+  "author": "Yorke Rhodes <yorke@hyperlane.xyz>",
+  "license": "MIT",
+  "dependencies": {
+    "@hyperlane-xyz/core": "^5.8.0"
+  }
+}
