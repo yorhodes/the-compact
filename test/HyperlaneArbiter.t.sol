@@ -52,7 +52,7 @@ contract HyperlaneArbiterTest is TheCompactTest {
         uint256 fee = amount - 1;
         uint32 chainId = destination;
 
-        string memory witnessTypestring = "Intent intent)Intent(uint32 chainId,address recipient,address token,uint256 amount)";
+        string memory witnessTypestring = "Intent intent)Intent(uint256 fee,uint32 chainId,address recipient,address token,uint256 amount)";
 
         Intent memory intent = Intent(fee, chainId, address(token), swapper, amount);
 
@@ -72,7 +72,7 @@ contract HyperlaneArbiterTest is TheCompactTest {
 
         bytes32 claimHash = keccak256(
             abi.encode(
-                keccak256("Compact(address arbiter,address sponsor,uint256 nonce,uint256 expires,uint256 id,uint256 amount,Intent intent)Intent(uint32 chainId,address recipient,address token,uint256 amount)"),
+                keccak256("Compact(address arbiter,address sponsor,uint256 nonce,uint256 expires,uint256 id,uint256 amount,Intent intent)Intent(uint256 fee,uint32 chainId,address recipient,address token,uint256 amount)"),
                 arbiter,
                 swapper,
                 nonce,

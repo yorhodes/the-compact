@@ -23,7 +23,7 @@ struct Fill {
     uint256 fee;
 }
 
-string constant TYPESTRING = "Intent(uint32 chainId,address recipient,address token,uint256 amount)";
+string constant TYPESTRING = "Intent(uint256 fee,uint32 chainId,address recipient,address token,uint256 amount)";
 bytes32 constant TYPEHASH = keccak256(bytes(TYPESTRING));
 
 contract HyperlaneArbiter is Router {
